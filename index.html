@@ -2,7 +2,18 @@
 <h1>Hi, loading</h1>
 
 <script>
-  if(navigator.userAgent.toLowerCase().indexOf('safari/') > -1){
+  function isMobile() {
+    var match = window.matchMedia || window.msMatchMedia;
+    if(match) {
+        var mq = match("(pointer:coarse)");
+        return mq.matches;
+    }
+    return false;
+}
+  if(isMobile()){
+    window.location = "m.html"
+  }
+  else if(navigator.userAgent.toLowerCase().indexOf('safari/') > -1){
     window.location = "s.html"
   }else{
     window.location = "a.html"
