@@ -2,7 +2,12 @@
 <h1>Hi, loading</h1>
 
 <script>
-window.location = "a.html"
+  if(navigator.userAgent.toLowerCase().indexOf('safari/') > -1){
+    window.location = "s.html"
+  }else{
+    window.location = "a.html"
+  }
+
 </script>
 
 
