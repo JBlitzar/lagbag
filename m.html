@@ -19,7 +19,20 @@
 	<body>
         <h1 style="font-family: Helvetica, sans-serif">Press anywhere to continue...</h1>
 
-        <a href="s.html" target="_blank" onclick="e = e || window.event;e.preventDefault();window.location = 's.html';window.open('s.html', '_blank')">.</a>
+        <a href="s.html" target="_blank">.</a>
+
+		<script>
+			if (window.performance) {
+			  console.info("window.performance works fine on this browser");
+			}
+			console.info(performance.navigation.type);
+			if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+			  console.info( "This page is reloaded" );
+			  window.location = "s.html"
+			} else {
+			  console.info( "This page is not reloaded");
+			}
+		</script>
         
 		
 	</body>
