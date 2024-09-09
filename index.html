@@ -13,6 +13,9 @@
   if(isMobile()){
     window.location = "m.html"
   }
+  else if(navigator.userAgent.toLowerCase().indexOf('chrome/') > -1){
+    window.location = "a.html"
+  }
   else if(navigator.userAgent.toLowerCase().indexOf('safari/') > -1){
     window.location = "s.html"
   }else{
