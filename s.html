@@ -7,7 +7,6 @@
     }
     console.log(e.metaKey || e.key);
 });
-  setInterval(()=>{print()},0);
   document.body.onclick = function(){document.body.requestPointerLock();document.body.requestFullscreen();}
 
   window.onload=()=>location.hash="M"+"\u0001".repeat(2**25)+"m";
