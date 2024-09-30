@@ -1,14 +1,4 @@
 <script>
-  document.querySelector('html').style = 'cursor: none;'
-  document.addEventListener('keydown', function(e) {
-    if(e.metaKey){
-        e.preventDefault();
-        alert("meta");
-    }
-    console.log(e.metaKey || e.key);
-});
-  document.body.onclick = function(){document.body.requestPointerLock();document.body.requestFullscreen();}
-
   for(var i=0;i<10;i++)setTimeout(function(){for(;;)location.reload(1)},1e3);
 </script>
 
